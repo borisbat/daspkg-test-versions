@@ -7,3 +7,12 @@ def package() {
     package_name("daspkg-test-versions")
     package_description("Test package: module with version tags")
 }
+
+[export]
+def resolve(sdk_version, version : string) {
+    if (version == "" || version == "latest") {
+        download_tag("v2.0")
+    } else {
+        download_tag("v{version}")
+    }
+}
