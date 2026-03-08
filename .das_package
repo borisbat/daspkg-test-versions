@@ -1,0 +1,9 @@
+options gen2
+
+require daslib/daspkg
+
+[export]
+def package() {
+    package_name("daspkg-test-versions")
+    package_description("Test package: module with version tags")
+}
